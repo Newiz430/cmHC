@@ -39,5 +39,13 @@ torchrun --standalone --nproc_per_node=8 train.py config/train_owt.py config/sma
 
 
 
-## Stay tuned.
+## $\mathscr{c}$mHC operator source code
+
+`ascend-cmhc-core/` provides the AscendC implementations of fused $\mathscr{c}$mHC forward and backward operators for Ascend 910C NPUs.
+
+| Operator | Directory | Description |
+|----------|-----------|-------------|
+| `MhcPreCmhc` (forward) | `mhc_pre_cmhc/` | Fused forward kernel: RMSNorm → linear projection (`x @ φ + bias`) → sigmoid gating → softmax → permutation-matrix einsum. Produces the branch input `hIn`, gating vector `hPost`, and the doubly-stochastic residual matrix `hRes`. |
+| `MhcPreCmhcBackward` (backward) | `mhc_pre_cmhc_backward/` | Backward kernel: computes gradients w.r.t. `x`, `φ` (weight), `α` (alpha), `bias`, and optional `γ` (RMSNorm gamma). |
+
 
