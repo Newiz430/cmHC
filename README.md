@@ -3,9 +3,7 @@
 <div align="center">
 
 [![Github](https://img.shields.io/badge/GitHub-repo-blue?style=for-the-badge&logo=github)](https://github.com/Newiz430/cmHC)
-
 [![Paper](https://img.shields.io/badge/Paper-2611.27193-red?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.27193)
-
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face%20Papers-%231%20Paper%20of%20the%20day-yellow?style=for-the-badge&logo=huggingface)](https://huggingface.co/papers/2611.27193)
 
 </div>
